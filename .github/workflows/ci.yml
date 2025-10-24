@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - perez  # Asegúrate de que sea la rama correcta
+      - main
 
 jobs:
   build:
