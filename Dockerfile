@@ -1,6 +1,5 @@
-FROM node:18
+FROM python:3.10
 WORKDIR /app
 COPY . .
-RUN npm install
-EXPOSE 3000
-CMD ["npm", "start"]
+RUN pip install pytest
+CMD ["python", "app.py"]
