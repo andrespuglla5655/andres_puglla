@@ -22,4 +22,4 @@ jobs:
       run: npm install
 
     - name: Run tests
-      run: npm test app.py
+      run: npm app.py
