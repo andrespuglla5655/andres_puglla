@@ -1,5 +1,13 @@
-FROM python:3.10
-WORKDIR /app
+
+FROM node:14
+
+WORKDIR /usr/src/app
+
+
 COPY . .
-RUN pip install pytest
-CMD ["python", "app.py"]
+
+RUN npm install
+
+EXPOSE 3000
+
+CMD ["npm", "start"]

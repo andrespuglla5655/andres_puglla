@@ -3,14 +3,23 @@ name: CI
 on:
   push:
     branches:
-      - puglla
+      - perez  # Asegúrate de que sea la rama correcta
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Instalar dependencias
-        run: npm install
-      - name: Ejecutar pruebas
-        run: npm test app.py
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: npm test app.y
